@@ -11,6 +11,7 @@ var command = process.argv[2];
 
 // print the array or arguments passed from command line
 console.log('Command: ', command);
+console.log(process.argv);
 
 if (command === 'add') {
     console.log('Adding new note');

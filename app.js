@@ -10,7 +10,7 @@ const notes = require('./notes');
 
 const argv = yargs.argv;
 
-var command = process.argv[2];
+var command = argv._[0];
 
 // print the array or arguments passed from command line
 console.log('Command: ', command);

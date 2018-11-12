@@ -17,7 +17,7 @@ var removeNote = (title) => {
 };
 
 module.exports = {
-    addNote, // if equal, same as: addNote: addNote in ES6
+    addNote, // if equal, same as: 'addNote: addNote' in ES6
     getAll,
     readNote,
     removeNote

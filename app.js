@@ -3,18 +3,22 @@ console.log('starting app...');
 // 3rd party modules
 const fs = require('fs');
 const _ = require('lodash');
+const yargs = require('yargs');
 
 // Local modules
 const notes = require('./notes');
+
+const argv = yargs.argv;
 
 var command = process.argv[2];
 
 // print the array or arguments passed from command line
 console.log('Command: ', command);
-console.log(process.argv);
+console.log('Process: ', process.argv);
+console.log('Yargs: ', argv);
 
 if (command === 'add') {
-    console.log('Adding new note');
+    notes.addNote(argv.title, argv.body);
 } else if (command === 'list') {
     console.log('Listing all notes');
 } else if (command === 'read') {

@@ -14,7 +14,6 @@ var command = process.argv[2];
 
 // print the array or arguments passed from command line
 console.log('Command: ', command);
-console.log('Process: ', process.argv);
 console.log('Yargs: ', argv);
 
 if (command === 'add') {
@@ -22,9 +21,9 @@ if (command === 'add') {
 } else if (command === 'list') {
     notes.getAll();
 } else if (command === 'read') {
-    console.log('Reading a note');
+    notes.readNote(argv.title);
 } else if (command === 'remove') {
-    console.log('Removing a note');
+    notes.removeNote(argv.title);
 } else {
     console.log('Command not recognized');
 }
